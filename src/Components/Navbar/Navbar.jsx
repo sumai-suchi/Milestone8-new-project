@@ -1,5 +1,4 @@
-
-
+import Linda from "../Linda/Linda";
 const Navbar = () => {
     const routes = [
         { id: 1, name: "Home", path: "/" },
@@ -15,9 +14,7 @@ const Navbar = () => {
             
            <ul className="md:flex">
            {
-                routes.map(route=><li className="mr-4 font-semibold" key={route.id}>
-                    <a href={`${route.path}`}>{route.name}</a>
-                </li> )
+                routes.map(route=><Linda key={route.id} route={route}></Linda> )
             }
            </ul>
 
